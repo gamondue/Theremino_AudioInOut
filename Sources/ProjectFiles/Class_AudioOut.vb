@@ -22,7 +22,7 @@ Public Class AudioOut
     Private m_BuffersCount As Int32
     Private m_FillProc As BufferFillEventHandler
     Private m_OutputActive As Boolean
-    Private m_hWaveOut As Int32
+    Private m_hWaveOut As IntPtr
     Private m_WavehdrLen As Int32
     Private m_WavehdrFlagOffset As Int32
     Private m_Result As Int32

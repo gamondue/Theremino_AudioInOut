@@ -1,32 +1,25 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Basic Express 2008
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Theremino_AudioInOut", "Theremino_AudioInOut.vbproj", "{D7618B49-6A8C-4E61-A0DD-0844637F80B9}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36203.30 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Theremino_AudioInOut", "Theremino_AudioInOut.vbproj", "{E3D81A86-6599-AC9B-7110-64123DA73904}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
-		Debug|Itanium = Debug|Itanium
-		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
-		Release|Itanium = Release|Itanium
-		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D7618B49-6A8C-4E61-A0DD-0844637F80B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D7618B49-6A8C-4E61-A0DD-0844637F80B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D7618B49-6A8C-4E61-A0DD-0844637F80B9}.Debug|Itanium.ActiveCfg = Debug|Itanium
-		{D7618B49-6A8C-4E61-A0DD-0844637F80B9}.Debug|Itanium.Build.0 = Debug|Itanium
-		{D7618B49-6A8C-4E61-A0DD-0844637F80B9}.Debug|x86.ActiveCfg = Debug|x86
-		{D7618B49-6A8C-4E61-A0DD-0844637F80B9}.Debug|x86.Build.0 = Debug|x86
-		{D7618B49-6A8C-4E61-A0DD-0844637F80B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D7618B49-6A8C-4E61-A0DD-0844637F80B9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D7618B49-6A8C-4E61-A0DD-0844637F80B9}.Release|Itanium.ActiveCfg = Release|Itanium
-		{D7618B49-6A8C-4E61-A0DD-0844637F80B9}.Release|Itanium.Build.0 = Release|Itanium
-		{D7618B49-6A8C-4E61-A0DD-0844637F80B9}.Release|x86.ActiveCfg = Release|x86
-		{D7618B49-6A8C-4E61-A0DD-0844637F80B9}.Release|x86.Build.0 = Release|x86
+		{E3D81A86-6599-AC9B-7110-64123DA73904}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3D81A86-6599-AC9B-7110-64123DA73904}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3D81A86-6599-AC9B-7110-64123DA73904}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3D81A86-6599-AC9B-7110-64123DA73904}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {456CB12C-DC82-433A-8506-1D1584F89A71}
 	EndGlobalSection
 EndGlobal

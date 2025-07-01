@@ -21,7 +21,7 @@ Public Class AudioIn
     Private m_BuffersCount As Int32
     Private m_DoneProc As BufferDoneEventHandler
     Private m_InputActive As Boolean
-    Private m_hWaveIn As Int32
+    Private m_hWaveIn As IntPtr
     Private m_WavehdrLen As Int32
     Private m_WavehdrFlagOffset As Int32
     Private m_Result As Int32

@@ -1033,13 +1033,13 @@ Public Class MyButton
         End If
 
         Select Case Me.TextImageRelation
-            Case Windows.Forms.TextImageRelation.Overlay, Windows.Forms.TextImageRelation.ImageAboveText, Windows.Forms.TextImageRelation.TextAboveImage
+            Case TextImageRelation.Overlay, TextImageRelation.ImageAboveText, TextImageRelation.TextAboveImage
                 TextArea = AdjustRect(ButtonArea, TextMargin)
                 ImageArea = ButtonArea
                 TextArea.Y += PressedOffset
                 Imagept = ImageLocation(GetStringFormat(Me.ImageAlign), ButtonArea.Size, ImageSizeUse)
                 Imagept.X += ButtonArea.X
-            Case Windows.Forms.TextImageRelation.ImageBeforeText
+            Case TextImageRelation.ImageBeforeText
                 Dim TextSize As SizeF = g.MeasureString(Me.Text, Me.Font)
                 TextArea = AdjustRect(ButtonArea, TextMargin)
                 TextArea.Width -= ImageSizeUse.Width - 4
@@ -1059,7 +1059,7 @@ Public Class MyButton
                         TextArea.X = ButtonArea.X + ImageSizeUse.Width - 8
                 End Select
 
-            Case Windows.Forms.TextImageRelation.TextBeforeImage
+            Case TextImageRelation.TextBeforeImage
                 Dim TextSize As SizeF = g.MeasureString(Me.Text, Me.Font)
                 TextArea = AdjustRect(ButtonArea, TextMargin)
                 TextArea.Width -= ImageSizeUse.Width - 8
@@ -1336,7 +1336,7 @@ Public Class MyButton
             selectservice.SetSelectedComponents(selection, SelectionTypes.Add)
 
             'FocusPoints Reset
-            If e.Button = Windows.Forms.MouseButtons.Right Then
+            If e.Button = MouseButtons.Right Then
                 If Me.CenterPtTracker.IsActive Then
                     If Checked Then
                         Me.FocalPointsChecked = New cFocalPoints(New PointF(0.5, 0.5), Me.FocalPointsChecked.FocusScales)
@@ -1365,22 +1365,22 @@ Public Class MyButton
 
     Private Sub MyButton_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseMove
         If DesignMode Then
-            If e.Button = Windows.Forms.MouseButtons.Left Then
+            If e.Button = MouseButtons.Left Then
                 If Me.CenterPtTracker.IsActive Then
                     If Checked Then
-                        Me.FocalPointsChecked = New cFocalPoints(New PointF(CSng(e.X / Me.Width), CSng(e.Y / Me.Height)), _
+                        Me.FocalPointsChecked = New cFocalPoints(New PointF(CSng(e.X / Me.Width), CSng(e.Y / Me.Height)),
                                                           Me.FocalPointsChecked.FocusScales)
                     Else
-                        Me.FocalPoints = New cFocalPoints(New PointF(CSng(e.X / Me.Width), CSng(e.Y / Me.Height)), _
+                        Me.FocalPoints = New cFocalPoints(New PointF(CSng(e.X / Me.Width), CSng(e.Y / Me.Height)),
                                                           Me.FocalPoints.FocusScales)
                     End If
                     Me.Invalidate()
                 ElseIf Me.FocusPtTracker.IsActive Then
                     If Checked Then
-                        Me.FocalPointsChecked = New cFocalPoints(Me.FocalPointsChecked.CenterPoint, _
+                        Me.FocalPointsChecked = New cFocalPoints(Me.FocalPointsChecked.CenterPoint,
                                                           New PointF(CSng(e.X / Me.Width), CSng(e.Y / Me.Height)))
                     Else
-                        Me.FocalPoints = New cFocalPoints(Me.FocalPoints.CenterPoint, _
+                        Me.FocalPoints = New cFocalPoints(Me.FocalPoints.CenterPoint,
                                                           New PointF(CSng(e.X / Me.Width), CSng(e.Y / Me.Height)))
                     End If
                     Me.Invalidate()

@@ -55,8 +55,8 @@ Public Class MyComboBox
            ControlStyles.ResizeRedraw Or _
            ControlStyles.SupportsTransparentBackColor, True)
 
-        Me.FlatStyle = Windows.Forms.FlatStyle.Standard
-        Me.DrawMode = Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.FlatStyle = FlatStyle.Standard
+        Me.DrawMode = DrawMode.OwnerDrawFixed
         Me.DropDownStyle = ComboBoxStyle.DropDownList
     End Sub
 

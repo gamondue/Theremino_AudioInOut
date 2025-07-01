@@ -1,208 +1,46 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{D7618B49-6A8C-4E61-A0DD-0844637F80B9}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Theremino_AudioInOut.My.MyApplication</StartupObject>
-    <RootNamespace>Theremino_AudioInOut</RootNamespace>
-    <AssemblyName>Theremino_AudioInOut</AssemblyName>
-    <FileAlignment>512</FileAlignment>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <StartupObject>Sub Main</StartupObject>
+    <UseWindowsForms>true</UseWindowsForms>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-    <OptionExplicit>On</OptionExplicit>
-    <OptionCompare>Binary</OptionCompare>
-    <OptionStrict>On</OptionStrict>
-    <OptionInfer>Off</OptionInfer>
-    <ApplicationIcon>ProjectFiles\Theremino1.ico</ApplicationIcon>
+    <Title>Theremino AudioInOut</Title>
+    <Authors>Theremino System</Authors>
+    <Description>IN_OUT for WaveGen and Spectrum</Description>
+    <Copyright>No Copyright (NC) Theremino System</Copyright>
+    <PackageProjectUrl>https://www.theremino.com</PackageProjectUrl>
+    <Company>Theremino System</Company>
+    <PackageIcon>ThereminoIgloo.ico</PackageIcon>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <DefineDebug>true</DefineDebug>
-    <DefineTrace>true</DefineTrace>
-    <OutputPath>..\Theremino_AudioInOut\</OutputPath>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <DefineDebug>false</DefineDebug>
-    <DefineTrace>true</DefineTrace>
-    <Optimize>true</Optimize>
-    <OutputPath>..\Theremino_AudioInOut\</OutputPath>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Itanium' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DefineDebug>true</DefineDebug>
-    <DefineTrace>true</DefineTrace>
-    <OutputPath>..\Theremino_AudioInOut\</OutputPath>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
-    <DebugType>full</DebugType>
-    <PlatformTarget>Itanium</PlatformTarget>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Itanium' ">
-    <DefineTrace>true</DefineTrace>
-    <OutputPath>..\Theremino_AudioInOut\</OutputPath>
-    <Optimize>true</Optimize>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>Itanium</PlatformTarget>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DefineDebug>true</DefineDebug>
-    <DefineTrace>true</DefineTrace>
-    <OutputPath>..\Theremino_AudioInOut\</OutputPath>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
-    <DebugType>full</DebugType>
-    <PlatformTarget>x86</PlatformTarget>
-    <Optimize>false</Optimize>
-    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
-    <DefineTrace>false</DefineTrace>
-    <OutputPath>..\Theremino_AudioInOut\</OutputPath>
-    <Optimize>false</Optimize>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
-    <DebugType>None</DebugType>
-    <PlatformTarget>x86</PlatformTarget>
-    <RemoveIntegerChecks>true</RemoveIntegerChecks>
-    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
-  </PropertyGroup>
+
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Design" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
-  </ItemGroup>
-  <ItemGroup>
-    <Import Include="Microsoft.VisualBasic" />
-    <Import Include="System" />
-    <Import Include="System.Collections" />
-    <Import Include="System.Collections.Generic" />
-    <Import Include="System.Diagnostics" />
+    <Import Include="System.Data" />
     <Import Include="System.Drawing" />
     <Import Include="System.Windows.Forms" />
   </ItemGroup>
+
   <ItemGroup>
-    <Compile Include="ProjectFiles\Class_AudioIn.vb" />
-    <Compile Include="ProjectFiles\Class_AudioOut.vb" />
-    <Compile Include="ProjectFiles\Class_FIFO.vb" />
-    <Compile Include="ProjectFiles\Class_ThereminoSlots.vb" />
-    <Compile Include="CustomControls\dlgCorners.designer.vb">
-      <DependentUpon>dlgCorners.vb</DependentUpon>
-    </Compile>
-    <Compile Include="CustomControls\dlgCorners.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CustomControls\DropdownColorBlender.designer.vb">
-      <DependentUpon>DropdownColorBlender.vb</DependentUpon>
-    </Compile>
-    <Compile Include="CustomControls\DropdownColorBlender.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="CustomControls\MyButton.Designer.vb">
-      <DependentUpon>MyButton.vb</DependentUpon>
-    </Compile>
-    <Compile Include="CustomControls\MyButton.vb">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="CustomControls\MyButtonDesigner.vb" />
-    <Compile Include="CustomControls\MyComboBox.vb">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="CustomControls\MyGroupBox.vb">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="CustomControls\MyListView.vb">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="CustomControls\MyTabControl.vb">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="CustomControls\MyTextBox.vb">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="ProjectFiles\Form1.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ProjectFiles\Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ProjectFiles\Class_FHT.vb" />
-    <Compile Include="ProjectFiles\Module_MultigenTest.vb" />
-    <Compile Include="ProjectFiles\Module_RecPlayer.vb" />
-    <Compile Include="ProjectFiles\Module_SaveLoad.vb" />
-    <Compile Include="ProjectFiles\Module_Scope.vb" />
-    <Compile Include="ProjectFiles\Class_WavePlayer.vb" />
-    <Compile Include="ProjectFiles\Module_Spectrum.vb" />
-    <Compile Include="ProjectFiles\Module_SpectrumBands.vb" />
-    <Compile Include="ProjectFiles\Module_Timers.vb" />
-    <Compile Include="ProjectFiles\Module_Utils.vb" />
-    <Compile Include="ProjectFiles\Module_WaveGenerators.vb" />
-    <Compile Include="ProjectFiles\Module_WaveNative.vb" />
-    <Compile Include="My Project\AssemblyInfo.vb" />
-    <Compile Include="My Project\Application.Designer.vb">
+    <None Include="..\..\Theremino_AudioInput_Net8\Sources\ProjectFiles\ThereminoIgloo.ico">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="My Project\Application.Designer.vb">
+      <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
     </Compile>
-    <Compile Include="My Project\Resources.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="My Project\Settings.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
   </ItemGroup>
+
   <ItemGroup>
-    <EmbeddedResource Include="CustomControls\dlgCorners.resx">
-      <DependentUpon>dlgCorners.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CustomControls\DropdownColorBlender.resx">
-      <DependentUpon>DropdownColorBlender.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CustomControls\MyButton.resx">
-      <DependentUpon>MyButton.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ProjectFiles\Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="My Project\Resources.resx">
-      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
-      <CustomToolNamespace>My.Resources</CustomToolNamespace>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="My Project\Application.myapp">
+    <None Update="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
-    <None Include="My Project\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <CustomToolNamespace>My</CustomToolNamespace>
-      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
-    </None>
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="CustomControls\MyButton.bmp" />
-    <Content Include="ProjectFiles\Theremino1.ico" />
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+
 </Project>

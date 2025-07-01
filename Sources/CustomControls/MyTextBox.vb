@@ -330,7 +330,7 @@ Public Class MyTextBox
         ' CursorPosOldY is used for tablet errors (continuous increment also whith mouse not moving)
         Static CursorPositionOld As Point
 
-        If Not _TrimmingValue And Me.Enabled And _Increment > 0 And e.Button = Windows.Forms.MouseButtons.Left Then
+        If Not _TrimmingValue And Me.Enabled And _Increment > 0 And e.Button = MouseButtons.Left Then
             If Math.Abs(Cursor.Position.Y - _EditingPos.Y) > Math.Abs(Cursor.Position.X - _EditingPos.X) + 1 Then
                 _DeltaY = 0
                 HideCaret_WithoutTestIt()
@@ -631,7 +631,7 @@ Public Class MyTextBox
                 strFormat.Alignment = StringAlignment.Far
         End Select
         '
-        If Me.BorderStyle = Windows.Forms.BorderStyle.None Or Me.Multiline Then
+        If Me.BorderStyle = BorderStyle.None Or Me.Multiline Then
             strFormat.LineAlignment = StringAlignment.Near
         Else
             strFormat.LineAlignment = StringAlignment.Center

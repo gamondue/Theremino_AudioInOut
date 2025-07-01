@@ -119,44 +119,44 @@ Namespace WaveNative
         <DllImport("winmm.dll")> _
         Public Function waveOutGetNumDevs() As Int32
         End Function
-        <DllImport("winmm.dll")> _
-        Public Function waveOutOpen(ByRef hWaveOut As Int32, _
-                                    ByVal uDeviceID As Int32, _
-                                    ByRef lpFormat As WAVEFORMATEX, _
-                                    ByVal dwCallback As Int32, _
-                                    ByVal dwInstance As Int32, _
+        <DllImport("winmm.dll")>
+        Public Function waveOutOpen(ByRef hWaveOut As IntPtr,
+                                    ByVal uDeviceID As Int32,
+                                    ByRef lpFormat As WAVEFORMATEX,
+                                    ByVal dwCallback As Int32,
+                                    ByVal dwInstance As Int32,
                                     ByVal dwFlags As Int32) As Int32
         End Function
-        <DllImport("winmm.dll")> _
-        Public Function waveOutPrepareHeader(ByVal hWaveOut As Int32, _
-                                             ByVal lpWaveOutHdr As IntPtr, _
+        <DllImport("winmm.dll")>
+        Public Function waveOutPrepareHeader(ByVal hWaveOut As IntPtr,
+                                             ByVal lpWaveOutHdr As IntPtr,
                                              ByVal uSize As Int32) As Int32
         End Function
-        <DllImport("winmm.dll")> _
-        Public Function waveOutUnprepareHeader(ByVal hWaveOut As Int32, _
-                                               ByVal lpWaveOutHdr As IntPtr, _
+        <DllImport("winmm.dll")>
+        Public Function waveOutUnprepareHeader(ByVal hWaveOut As IntPtr,
+                                               ByVal lpWaveOutHdr As IntPtr,
                                                ByVal uSize As Int32) As Int32
         End Function
-        <DllImport("winmm.dll")> _
-        Public Function waveOutWrite(ByVal hWaveOut As Int32, _
-                                     ByVal lpWaveOutHdr As IntPtr, _
+        <DllImport("winmm.dll")>
+        Public Function waveOutWrite(ByVal hWaveOut As IntPtr,
+                                     ByVal lpWaveOutHdr As IntPtr,
                                      ByVal uSize As Int32) As Int32
         End Function
-        <DllImport("winmm.dll")> _
-        Public Function waveOutReset(ByVal hWaveOut As Int32) As Int32
+        <DllImport("winmm.dll")>
+        Public Function waveOutReset(ByVal hWaveOut As IntPtr) As Int32
         End Function
-        <DllImport("winmm.dll")> _
-        Public Function waveOutClose(ByVal hWaveOut As Int32) As Int32
+        <DllImport("winmm.dll")>
+        Public Function waveOutClose(ByVal hWaveOut As IntPtr) As Int32
         End Function
-        <DllImport("winmm.dll")> _
-        Public Function waveOutPause(ByVal hWaveOut As Int32) As Int32
+        <DllImport("winmm.dll")>
+        Public Function waveOutPause(ByVal hWaveOut As IntPtr) As Int32
         End Function
-        <DllImport("winmm.dll")> _
-        Public Function waveOutRestart(ByVal hWaveOut As Int32) As Int32
+        <DllImport("winmm.dll")>
+        Public Function waveOutRestart(ByVal hWaveOut As IntPtr) As Int32
         End Function
-        <DllImport("winmm.dll")> _
-        Public Function waveOutGetPosition(ByVal hWaveOut As Int32, _
-                                           ByRef lpInfo As Int32, _
+        <DllImport("winmm.dll")>
+        Public Function waveOutGetPosition(ByVal hWaveOut As IntPtr,
+                                           ByRef lpInfo As Int32,
                                            ByVal uSize As Int32) As Int32
         End Function
 
@@ -164,40 +164,40 @@ Namespace WaveNative
         <DllImport("winmm.dll")> _
         Public Function waveInGetNumDevs() As Int32
         End Function
-        <DllImport("winmm.dll")> _
-        Public Function waveInOpen(ByRef hWaveIn As Int32, _
-                                   ByVal uDeviceID As Int32, _
-                                   ByRef lpFormat As WAVEFORMATEX, _
-                                   ByVal dwCallback As Int32, _
-                                   ByVal dwInstance As Int32, _
+        <DllImport("winmm.dll")>
+        Public Function waveInOpen(ByRef hWaveIn As IntPtr,
+                                   ByVal uDeviceID As Int32,
+                                   ByRef lpFormat As WAVEFORMATEX,
+                                   ByVal dwCallback As Int32,
+                                   ByVal dwInstance As Int32,
                                    ByVal dwFlags As Int32) As Int32
         End Function
-        <DllImport("winmm.dll")> _
-        Public Function waveInPrepareHeader(ByVal hWaveIn As Int32, _
-                                            ByVal lpWaveInHdr As IntPtr, _
+        <DllImport("winmm.dll")>
+        Public Function waveInPrepareHeader(ByVal hWaveIn As IntPtr,
+                                            ByVal lpWaveInHdr As IntPtr,
                                             ByVal uSize As Int32) As Int32
         End Function
-        <DllImport("winmm.dll")> _
-        Public Function waveInUnprepareHeader(ByVal hWaveIn As Int32, _
-                                              ByVal lpWaveInHdr As IntPtr, _
+        <DllImport("winmm.dll")>
+        Public Function waveInUnprepareHeader(ByVal hWaveIn As IntPtr,
+                                              ByVal lpWaveInHdr As IntPtr,
                                               ByVal uSize As Int32) As Int32
         End Function
-        <DllImport("winmm.dll")> _
-        Public Function waveInAddBuffer(ByVal hwi As Int32, _
-                                        ByVal pwh As IntPtr, _
+        <DllImport("winmm.dll")>
+        Public Function waveInAddBuffer(ByVal hwi As IntPtr,
+                                        ByVal pwh As IntPtr,
                                         ByVal cbwh As Int32) As Int32
         End Function
-        <DllImport("winmm.dll")> _
-        Public Function waveInClose(ByVal hwi As Int32) As Int32
+        <DllImport("winmm.dll")>
+        Public Function waveInClose(ByVal hwi As IntPtr) As Int32
         End Function
-        <DllImport("winmm.dll")> _
-        Public Function waveInReset(ByVal hwi As Int32) As Int32
+        <DllImport("winmm.dll")>
+        Public Function waveInReset(ByVal hwi As IntPtr) As Int32
         End Function
-        <DllImport("winmm.dll")> _
-        Public Function waveInStart(ByVal hwi As Int32) As Int32
+        <DllImport("winmm.dll")>
+        Public Function waveInStart(ByVal hwi As IntPtr) As Int32
         End Function
-        <DllImport("winmm.dll")> _
-        Public Function waveInStop(ByVal hwi As Int32) As Int32
+        <DllImport("winmm.dll")>
+        Public Function waveInStop(ByVal hwi As IntPtr) As Int32
         End Function
 
         ' --------------------------------------------------------------------- 

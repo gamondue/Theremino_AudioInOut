@@ -93,9 +93,9 @@ Public Class DropdownColorBlender
                     UpdateRGBnuds(CType(MiddlePointers(CurrPointer), cblPointer).pColor)
                 End If
 
-                If e.Button = Windows.Forms.MouseButtons.Left Then
+                If e.Button = MouseButtons.Left Then
                     MouseMoving = True
-                ElseIf e.Button = Windows.Forms.MouseButtons.Right Then
+                ElseIf e.Button = MouseButtons.Right Then
                     MiddlePointers.Remove(CurrPointer)
                 End If
             Else
@@ -112,9 +112,9 @@ Public Class DropdownColorBlender
                     UpdateRGBnuds(EndPointer.pColor)
                 Else
                     'If the cursor is not over a cblPointer then Add One
-                    If e.Button = Windows.Forms.MouseButtons.Left Then
+                    If e.Button = MouseButtons.Left Then
                         ClearCurrPointer()
-                        MiddlePointers.Add(New cblPointer(CSng(((e.X - 10) / (Me.Width - 20))), _
+                        MiddlePointers.Add(New cblPointer(CSng(((e.X - 10) / (Me.Width - 20))),
                             Color.FromArgb(tbarAlpha.Value, CInt(nudRed.Value), CInt(nudGreen.Value), CInt(nudBlue.Value)), True))
                         SortCollection(MiddlePointers, "pPos", True)
                         CurrPointer = FindCurr()
@@ -126,8 +126,8 @@ Public Class DropdownColorBlender
         End If
     End Sub
 
-    Private Sub ColorBlender_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseMove
-        If e.Button = Windows.Forms.MouseButtons.Left Then
+    Private Sub ColorBlender_MouseMove(ByVal sender As Object, ByVal e As MouseEventArgs) Handles Me.MouseMove
+        If e.Button = MouseButtons.Left Then
             If MouseMoving Then
                 If e.X >= 11 And e.X <= (Me.Width - 11) Then
                     CType(MiddlePointers(CurrPointer), cblPointer).pPos = CSng(((e.X - 10) / (Me.Width - 20)))
@@ -450,16 +450,16 @@ Public Class DropdownColorBlender
         Panel17.MouseEnter, Panel21.MouseEnter, Panel18.MouseEnter, Panel28.MouseEnter, Panel27.MouseEnter, Panel26.MouseEnter, Panel25.MouseEnter, _
         Panel24.MouseEnter, Panel23.MouseEnter, Panel6.MouseEnter, Panel29.MouseEnter
         Try
-            CurrSwatch.BorderStyle = Windows.Forms.BorderStyle.Fixed3D
+            CurrSwatch.BorderStyle = BorderStyle.Fixed3D
         Catch ex As Exception
         End Try
         CurrSwatch = CType(sender, Panel)
-        CurrSwatch.BorderStyle = Windows.Forms.BorderStyle.FixedSingle
+        CurrSwatch.BorderStyle = BorderStyle.FixedSingle
     End Sub
 
     Private Sub TabControl1_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles TabControl1.MouseLeave
         Try
-            CurrSwatch.BorderStyle = Windows.Forms.BorderStyle.Fixed3D
+            CurrSwatch.BorderStyle = BorderStyle.Fixed3D
         Catch ex As Exception
         End Try
 
