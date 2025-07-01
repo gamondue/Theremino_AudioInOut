@@ -1,0 +1,62 @@
+ Program Params
+===========================================
+Form1_Top=             287
+Form1_Left=            2339
+Form1_Width=           689
+Form1_Height=          381
+Form1_WindowState=     0
+
+ Audio InOut
+===========================================
+SelectedAudioIn=       1
+SelectedAudioOut=      1
+
+ Generators
+===========================================
+FirstInSlot=           -1
+Generator1=            True
+Generator2=            False
+Generator3=            False
+Gen1_Wave=             Pwm
+Gen2_Wave=             Sine
+Gen3_Wave=             Sine
+Gen1_Freq=             100
+Gen2_Freq=             150
+Gen3_Freq=             200
+Gen1_dB=               -12
+Gen2_dB=               -20
+Gen3_dB=               -20
+Gen1_Pwm=              10
+Gen2_Pwm=              50
+Gen3_Pwm=              50
+
+ Scope
+===========================================
+ScopeVoltage=          3
+ScopeTime=             4
+ScopeNeg=              True
+ScopeTrig=             True
+
+ Bands
+===========================================
+BandsCount=            64
+BandsAGC=              False
+FirstOutSlot=          -1
+BandsMaxDb=            0
+BandsMinDb=            -100
+BandsMaxFreq=          1000
+BandsMinFreq=          50
+BandsSpeed=            100
+BandsLogX=             True
+BandsLogY=             True
+
+ Spectrum
+===========================================
+SpecMaxDb=             0
+SpecMinDb=             -100
+SpecMaxFreq=           1000
+SpecMinFreq=           50
+SpecSpeed=             100
+SpecLogX=              True
+SpecLogY=              True
+Spec_Window=           Blackman
